@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<style>
+*
+{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 0;
+    padding: 0;
+	
+}
+.login
+{
+    min-height: 200px;
+    width:700px;
+    float: left;
+    background-color:#B7E8FF;
+    margin-left: 300px;
+    margin-top: 80px;
+    padding-bottom: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 20px #97CBFF;
+}
+.head
+{
+    height: 100px;
+    width: 700px;
+    float: left;
+    background-color: #FFF;
+    line-height: 100px;
+    font-size: 62px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    border-radius:40px 40px 0 0;
+}
+.row
+{
+    height: 30px;
+    width: 600px;
+    float: left;
+    margin-top:20px;
+ 	
+ }
+.rowb
+{
+    height: 70px;
+    width: 600px;
+    float: left;
+    margin-top: 30px;
+    text-align: center;
+	margin-left:40px;
+ }
+.s1
+{
+    height: inherit;
+    width: 180px;
+    font-size: 25px;
+    line-height: 30px;
+    padding-left: 20px;
+    float: left;
+}
+.s2
+{
+    height: inherit;
+    line-height: 30px;
+    width: 400px;
+    float: left;
+}
+.fld
+{
+    height: 30px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+.btn
+{
+    height: 55px;
+    width: 140px;
+    font-size: 30px;
+    background-color: #6B6B6B;
+    border: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+	text-align:center;
+}
+.fld:hover
+{
+    box-shadow: 0 0 10px black;
+}
+.fld:focus
+{
+    box-shadow: 0 0 10px #CCCCCC;
+    outline: solid;
+}
+.btn:hover
+{
+    background-color: #0076AE;
+}
+</style>
+
+<body bgcolor="#79D3FF";>
+<form method="post" action="checklogin.php" onSubmit="return B()"><div class="login">
+            <div class="head">Login</div>
+             <div class="row">
+                <div class="s1">Full-Name</div>
+                <div class="s2"><input type="text" name="m1" id="d1" class="fld"></div>
+            </div>
+             <div class="row">
+                <div class="s1">contact</div>
+                <div class="s2"><input type="tel" name="m1" id="d1" class="fld"></div>
+            </div>
+             <div class="row">
+                <div class="s1">Address</div>
+                <div class="s2"><input type="tel" name="m1" id="d1" class="fld"></div>
+            </div>
+            <div class="row">
+                <div class="s1">Email</div>
+                <div class="s2"><input type="email" name="m1" id="d1" class="fld"></div>
+            </div>
+           <span id="e1" style="margin-left:300px;  color: red; font-family: arial black;"></span>
+            <div class="row">
+                <div class="s1">Password</div>
+                <div class="s2"><input type="password" class="fld" id="d2" name="m2"></div>
+            </div><span id="e2" style="margin-left:200px;  color: red; font-family: arial black;font-size:2px;"></span>
+            <div class="rowb">
+                <button type="submit" class="btn" name="B1">Login</button>
+            </div>
+        </div>
+    </form>
+    <script>
+    function B()
+    {
+        var m1,m2,c1,c2,a,b;
+        m1=document.getElementById("d1");
+        m2=document.getElementById("d2");
+        c1=document.getElementById("e1");
+        c2=document.getElementById("e2");
+        
+        a=m1.value;
+        b=m2.value;
+        
+        c1.innerHTML="";
+        c2.innerHTML="";
+        
+        if(a==null||a=="")
+            {
+                c1.innerHTML="*Enter Email";
+                m1.focus();
+                return false;
+            }
+        else if(b==null||b=="")
+            {
+                c2.innerHTML="*Enter Password";
+                m2.focus();
+                return false;
+            }
+    }
+</script>
+ 
+</body>
+</html>

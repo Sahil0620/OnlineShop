@@ -1,0 +1,22 @@
+.hi
+{
+    font-weight: 600;
+    color: darkred;
+}
+.pi
+{
+    font-weight: 600;
+    color: blue;
+}
+.si
+{
+    color: red;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+.slides
+{
+	background-color:#3CF;
+	height:200px;
+	width:200px;
+	}
